@@ -1,0 +1,28 @@
+//------Variables------
+$primaryBtn : rgb(170, 154, 235);
+$tableColour:rgb(172, 195, 248);
+
+@mixin flexCenter($direction) {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-direction: $direction;
+}
+
+header{
+    @include flexCenter(column);
+
+    background: lightblue;
+}
+
+main{
+    @extend header;
+    .skillgrid{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px;
+        place-items:center;
+    }
+}
+
