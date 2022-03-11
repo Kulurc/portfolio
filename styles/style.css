@@ -1,4 +1,23 @@
-header, main {
+@font-face {
+  font-family: Montserrat;
+  src: url(./fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url(./fonts//AvenirLTStd-Roman.otf);
+}
+
+body {
+  background-color: #282424;
+  margin: 0px auto;
+}
+
+header {
+  background-color: #282424;
+}
+
+header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,20 +27,144 @@ header, main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: lightblue;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-main .skillgrid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 100px;
-      grid-template-rows: 100px;
-  place-items: center;
+header nav .navlink {
+  color: white;
+  margin-left: 20vh;
+  margin-right: 20vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  text-decoration: none;
+  font-size: 3vh;
+  font-family: Montserrat;
+}
+
+header nav .navlink:hover {
+  -webkit-animation: increase-size 0.1s ease-in both;
+          animation: increase-size 0.1s ease-in both;
+}
+
+main {
+  color: white;
+}
+
+main .intro-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  font-family: Avenir;
+}
+
+main .intro-div .intro-p {
+  margin-right: 20%;
+}
+
+main .intro-div img {
+  border-radius: 50%;
+  width: 50vh;
+}
+
+main .intro-div a {
+  color: #c4aedd;
+}
+
+main .arrow-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .arrow-div .white-arrow {
+  width: 10vh;
+  -webkit-animation: up-down 1s ease-out infinite alternate;
+          animation: up-down 1s ease-out infinite alternate;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #1b1b1b;
+  color: white;
+  font-family: Avenir;
+}
+
+@-webkit-keyframes increase-size {
+  100% {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 4vh;
+    color: #c4aedd;
+  }
+}
+
+@keyframes increase-size {
+  100% {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 4vh;
+    color: #c4aedd;
+  }
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+  }
 }
 /*# sourceMappingURL=style.css.map */

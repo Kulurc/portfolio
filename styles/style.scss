@@ -1,7 +1,22 @@
 //------Variables------
-$primaryBtn : rgb(170, 154, 235);
-$tableColour:rgb(172, 195, 248);
+$backgroundColour : rgb(40,36,36);
+$linkColor: rgb(196, 174, 221);
+$footerColour: rgb(27, 27, 27);
 
+$marginSides: 20%;
+
+//------Fonts------
+@font-face{
+    font-family: Montserrat;
+    src:url(./fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face{
+    font-family:Avenir;
+    src:url(./fonts//AvenirLTStd-Roman.otf);
+}
+
+//------Functions------
 @mixin flexCenter($direction) {
     display:flex;
     justify-content:center;
@@ -10,19 +25,102 @@ $tableColour:rgb(172, 195, 248);
     flex-direction: $direction;
 }
 
-header{
-    @include flexCenter(column);
+@mixin marginSides($aspect){
+    margin-left: $aspect;
+    margin-right: $aspect;
+}
 
-    background: lightblue;
+@mixin marginVertical($aspect){
+    margin-top: $aspect;
+    margin-bottom: $aspect;
+}
+
+//------Styles------
+body{
+    background-color: $backgroundColour;
+    margin: 0px auto;
+}
+
+header{
+    background-color: $backgroundColour;
+    nav{
+        @include flexCenter(row);
+        .navlink{
+            color: white;
+    
+            @include marginSides(20vh);
+            @include marginVertical(1vh);
+        
+            text-decoration: none;
+            font-size: 3vh;
+            font-family: Montserrat;
+
+            &:hover{
+                animation: increase-size 0.1s ease-in both;
+            }
+        }
+    }
 }
 
 main{
-    @extend header;
-    .skillgrid{
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 100px;
-        place-items:center;
+    color: white;
+
+    .intro-div{
+        @include flexCenter(row-reverse);
+        @include marginSides($marginSides);
+        @include marginVertical(10vh);
+
+        font-family: Avenir;
+
+        .intro-p{
+            margin-right: $marginSides;
+        }
+        img{
+            border-radius:50%;
+            width: 50vh;
+        }
+        a{
+            color:$linkColor ;
+        }
+    }
+
+    .arrow-div{
+        @include flexCenter(row);
+        
+        .white-arrow{
+            width:10vh;
+            animation: up-down 1s ease-out infinite alternate;
+        }
     }
 }
+
+footer{
+    @include flexCenter(row);
+
+    background-color: $footerColour;
+    color:white;
+
+    font-family: Avenir;
+}
+
+//------Animations------
+@keyframes increase-size{
+    100%{
+        @include marginVertical(0);
+
+        font-size: 4vh;
+        color: $linkColor;
+    }
+}
+
+@keyframes up-down{
+    0%{
+        transform:translateY(0);
+    }
+    100%{
+        transform: translateY(25%);
+    }
+}
+
+
 
