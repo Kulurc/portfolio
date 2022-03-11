@@ -55,8 +55,13 @@ header{
             font-size: 3vh;
             font-family: Montserrat;
 
+            transition: 0.5s;
+
             &:hover{
-                animation: increase-size 0.1s ease-in both;
+                @include marginVertical(0);
+
+                font-size: 4vh;
+                color: $linkColor;
             }
         }
     }
@@ -104,15 +109,6 @@ footer{
 }
 
 //------Animations------
-@keyframes increase-size{
-    100%{
-        @include marginVertical(0);
-
-        font-size: 4vh;
-        color: $linkColor;
-    }
-}
-
 @keyframes up-down{
     0%{
         transform:translateY(0);

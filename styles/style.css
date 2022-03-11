@@ -42,11 +42,15 @@ header nav .navlink {
   text-decoration: none;
   font-size: 3vh;
   font-family: Montserrat;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 header nav .navlink:hover {
-  -webkit-animation: increase-size 0.1s ease-in both;
-          animation: increase-size 0.1s ease-in both;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 4vh;
+  color: #c4aedd;
 }
 
 main {
@@ -126,24 +130,6 @@ footer {
   background-color: #1b1b1b;
   color: white;
   font-family: Avenir;
-}
-
-@-webkit-keyframes increase-size {
-  100% {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 4vh;
-    color: #c4aedd;
-  }
-}
-
-@keyframes increase-size {
-  100% {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 4vh;
-    color: #c4aedd;
-  }
 }
 
 @-webkit-keyframes up-down {
