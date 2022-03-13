@@ -27,6 +27,8 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -47,8 +49,6 @@ header nav .navlink {
 }
 
 header nav .navlink:hover {
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 4vh;
   color: #c4aedd;
 }
@@ -67,19 +67,22 @@ main .intro-div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10vh;
+  margin-right: 10vh;
   margin-top: 10vh;
   margin-bottom: 10vh;
   font-family: Avenir;
 }
 
 main .intro-div .intro-p {
-  margin-right: 20%;
+  margin-right: 10vh;
+  width: 50vh;
 }
 
 main .intro-div img {
@@ -101,6 +104,8 @@ main .arrow-div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -123,6 +128,8 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;

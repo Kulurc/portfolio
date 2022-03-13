@@ -1,11 +1,13 @@
+//============
 //------Variables------
+//============
 $backgroundColour : rgb(40,36,36);
 $linkColor: rgb(196, 174, 221);
 $footerColour: rgb(27, 27, 27);
 
-$marginSides: 20%;
-
+//============
 //------Fonts------
+//============
 @font-face{
     font-family: Montserrat;
     src:url(./fonts/Montserrat-SemiBold.ttf);
@@ -16,11 +18,14 @@ $marginSides: 20%;
     src:url(./fonts//AvenirLTStd-Roman.otf);
 }
 
+//============
 //------Functions------
+//============
 @mixin flexCenter($direction) {
     display:flex;
     justify-content:center;
     align-items:center;
+    flex-wrap: wrap;
 
     flex-direction: $direction;
 }
@@ -35,7 +40,9 @@ $marginSides: 20%;
     margin-bottom: $aspect;
 }
 
+//============
 //------Styles------
+//============
 body{
     background-color: $backgroundColour;
     margin: 0px auto;
@@ -43,6 +50,7 @@ body{
 
 header{
     background-color: $backgroundColour;
+
     nav{
         @include flexCenter(row);
         .navlink{
@@ -57,8 +65,8 @@ header{
 
             transition: 0.5s;
 
-            &::hover{
-                @include marginVertical(0);
+            &:hover{
+                //@include marginVertical(0);
 
                 font-size: 4vh;
                 color: $linkColor;
@@ -72,20 +80,21 @@ main{
 
     .intro-div{
         @include flexCenter(row-reverse);
-        @include marginSides($marginSides);
+        @include marginSides(10vh);
         @include marginVertical(10vh);
 
         font-family: Avenir;
 
         .intro-p{
-            margin-right: $marginSides;
+            margin-right: 10vh;
+            width:50vh;
         }
         img{
             border-radius:50%;
             width: 50vh;
         }
         a{
-            color:$linkColor ;
+            color:$linkColor;
         }
     }
 
@@ -108,7 +117,9 @@ footer{
     font-family: Avenir;
 }
 
+//============
 //------Animations------
+//============
 @keyframes up-down{
     0%{
         transform:translateY(0);
