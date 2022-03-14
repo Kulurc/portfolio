@@ -106,6 +106,27 @@ main{
             animation: up-down 1s ease-out infinite alternate;
         }
     }
+
+    .work-div{
+        @include marginSides(20vh);
+
+        .image-container{
+            @include flexCenter(row);
+
+            .illustration-content{
+                height:40vh;
+            }
+
+            .pixel-content{
+                height: 50vh;
+            }
+
+            figcaption{
+                @include flexCenter(row);
+                font-family: Avenir;
+            }
+        } 
+    }
 }
 
 footer{

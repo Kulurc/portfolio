@@ -118,6 +118,56 @@ main .arrow-div .white-arrow {
           animation: up-down 1s ease-out infinite alternate;
 }
 
+main .work-div {
+  margin-left: 20vh;
+  margin-right: 20vh;
+}
+
+main .work-div .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .work-div .image-container .illustration-content {
+  height: 40vh;
+}
+
+main .work-div .image-container .pixel-content {
+  height: 50vh;
+}
+
+main .work-div .image-container figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: Avenir;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
