@@ -121,6 +121,22 @@ main .arrow-div .white-arrow {
 main .work-div {
   margin-left: 20vh;
   margin-right: 20vh;
+  /*
+        .game-section{
+            background-color: darkred;
+        }
+
+        .illustration-section{
+            background-color: darkcyan;
+        }
+
+        .model-section{
+            background-color: darkolivegreen;
+        }
+
+        .pixel-section{
+            background-color: darkgoldenrod;
+        } */
 }
 
 main .work-div .image-container {
@@ -145,8 +161,52 @@ main .work-div .image-container .illustration-content {
   height: 40vh;
 }
 
+main .work-div .image-container .model-content {
+  height: 50vh;
+}
+
 main .work-div .image-container .pixel-content {
   height: 50vh;
+}
+
+main .work-div .image-container .game-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .work-div .image-container .game-div .game-media {
+  width: 80vh;
+  height: 45vh;
+}
+
+main .work-div .image-container .game-div .game-title {
+  width: 30vh;
+  margin-top: 5vh;
+}
+
+main .work-div .image-container .game-div .game-p {
+  margin-left: 10vh;
+  width: 50vh;
+  font-family: Avenir;
+  font-size: 2.5vh;
+}
+
+main .work-div .image-container .game-div .game-p a {
+  color: #c4aedd;
+  text-decoration: none;
 }
 
 main .work-div .image-container figcaption {

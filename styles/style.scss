@@ -110,6 +110,25 @@ main{
     .work-div{
         @include marginSides(20vh);
 
+        //==Helper (Will Delete Later)==
+        /*
+        .game-section{
+            background-color: darkred;
+        }
+
+        .illustration-section{
+            background-color: darkcyan;
+        }
+
+        .model-section{
+            background-color: darkolivegreen;
+        }
+
+        .pixel-section{
+            background-color: darkgoldenrod;
+        } */
+        //==Helper End==
+
         .image-container{
             @include flexCenter(row);
 
@@ -117,8 +136,39 @@ main{
                 height:40vh;
             }
 
+            .model-content{
+                height: 50vh;
+            }
+
             .pixel-content{
                 height: 50vh;
+            }
+
+            .game-div{
+                @include flexCenter(row);
+
+                .game-media{
+                    width:80vh;
+                    height:45vh;
+                }
+
+                .game-title{
+                    width:30vh;
+                    margin-top: 5vh;
+                }
+
+                .game-p{
+                    margin-left:10vh;
+                    width:50vh;
+
+                    font-family: Avenir;
+                    font-size: 2.5vh;
+
+                    a{
+                        color: $linkColor;
+                        text-decoration: none;
+                    }
+                }
             }
 
             figcaption{
