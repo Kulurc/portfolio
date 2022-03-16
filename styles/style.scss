@@ -6,6 +6,9 @@ $linkColor: rgb(196, 174, 221);
 $footerColour: rgb(27, 27, 27);
 $inputColour : rgb(61, 55, 55);
 
+$navColour: rgb(29, 26, 26);
+$navSecondary:rgb(14, 12, 12);
+
 $buttonGreenColour: rgb(85, 147, 85);
 $buttonHoverColour: rgb(64, 118, 84);
 
@@ -62,6 +65,8 @@ $buttonHoverColour: rgb(64, 118, 84);
 //------Styles------
 //============
 html{
+    scroll-behavior: smooth;
+
     ::-webkit-scrollbar{
         width:0.25rem;
     }
@@ -80,28 +85,54 @@ body{
     margin: 0px auto;
 }
 
-header{
-    background-color: $backgroundColour;
+.navbar{
+    background-color:$navColour;
 
-    nav{
-        @include flexCenter(row);
-        .navlink{
-            color: white;
+    position:fixed;
+
+    transition: width 200ms ease;
+
+    .navbar-nav{
+        list-style: none;
+        padding: 0;
+        margin:0;
+
+        height: 100%;
+
+        display:flex;
+        align-items: center;
+
+        .nav-item{
+            width:100%;
+
+            .nav-link{
+                display:flex;
+                align-items: center;
     
-            @include marginSides(20vh);
-            @include marginVertical(1vh);
-        
-            text-decoration: none;
-            font-size: 3vh;
-            font-family: Montserrat;
+                height: 5rem;
+    
+                color:$linkColor;
+                font-family: Montserrat;
+                text-decoration:none;
 
-            transition: 0.5s;
+                filter: grayscale(100%) opacity(0.7);
+                transition: 200ms ease;
+    
+                .link-text{
+                    display:none;
+                    margin-left:1rem;
+                }
+    
+                img{
+                    min-width:2rem;
+                    margin: 0 1.5rem;
+                }
+    
+                &:hover{
+                    background:$navSecondary;
 
-            &:hover{
-                //@include marginVertical(0);
-
-                font-size: 4vh;
-                color: $linkColor;
+                    filter: grayscale(0%) opacity(1);
+                }
             }
         }
     }
@@ -110,10 +141,13 @@ header{
 main{
     color: white;
 
+    margin-left:5rem;
+
     .intro-div{
         @include flexCenter(row-reverse);
         @include marginSides(10vh);
-        @include marginVertical(10vh);
+
+        margin-bottom: 10vh;
 
         font-family: Avenir;
 
@@ -127,6 +161,11 @@ main{
         }
         a{
             color:$linkColor;
+            text-decoration: none;
+        }
+
+        h2{
+            font-size: 5vh;
         }
     }
 
@@ -142,6 +181,8 @@ main{
     .work-div{
         @include marginSides(20vh);
 
+        background-color: $backgroundColour;
+
         .work-header{
             @include flexCenter(row);
         }
@@ -153,6 +194,10 @@ main{
             font-size: 5vh;
 
             margin-bottom: 2vh;
+        }
+
+        .game-section, .illustration-section, .model-section, .pixel-section{
+            @include marginVertical(10vh);
         }
 
         .image-container{
@@ -247,19 +292,44 @@ main{
 
             h2{
                 margin:0.5vh;
+                font-size: 5vh;
             }
         }
     }
 }
 
 footer{
-    @include flexCenter(row);
+    @include flexCenter(column);
 
     background-color: $footerColour;
     color:white;
 
     font-family: Avenir;
+
+    .social-media-div{
+        @include flexCenter(row);
+        margin-left:5rem;
+
+        a{
+            text-decoration: none;
+
+            .social-icon{
+                @include marginSides(2.5vh);
+
+                margin-bottom: 5vh;
+
+                width:5vh;
+
+                fill:white;
+            }
+        }
+    }
+
+    p{
+        margin-left:5rem;
+    }
 }
+
 
 //============
 //------Animations------
@@ -273,5 +343,46 @@ footer{
     }
 }
 
+//============
+//------Media Queries------
+//============
+@media only screen and (max-width: 600px){
+    .navbar{
+        bottom:0;
+        width:100vw;
+        height: 5rem;
+    }
 
+    .navbar-nav{
+        flex-direction: row;
+    }
+
+    .nav-link{
+        justify-content: center;
+    }
+
+    main{
+        margin:0;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .navbar{
+        top:0;
+        width:5rem;
+        height:100vh;
+    }
+
+    .navbar:hover{
+        width:16rem;
+
+        .link-text{
+            display:inline !important;
+        }
+    }
+
+    .navbar-nav{
+        flex-direction: column;
+    }
+}
 
