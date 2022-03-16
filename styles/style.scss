@@ -4,6 +4,10 @@
 $backgroundColour : rgb(40,36,36);
 $linkColor: rgb(196, 174, 221);
 $footerColour: rgb(27, 27, 27);
+$inputColour : rgb(61, 55, 55);
+
+$buttonGreenColour: rgb(85, 147, 85);
+$buttonHoverColour: rgb(64, 118, 84);
 
 //============
 //------Fonts------
@@ -40,9 +44,37 @@ $footerColour: rgb(27, 27, 27);
     margin-bottom: $aspect;
 }
 
+@mixin inputValues(){
+    width:70vh;
+
+    padding:1vh;
+
+    font-family: Avenir;
+    font-size: 2.5vh;
+    color: white;
+
+    border-color: white;
+    border: 0;
+}
+
+
 //============
 //------Styles------
 //============
+html{
+    ::-webkit-scrollbar{
+        width:0.25rem;
+    }
+
+    ::-webkit-scrollbar-track{
+        background: black;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background: $linkColor;
+    }
+}
+
 body{
     background-color: $backgroundColour;
     margin: 0px auto;
@@ -110,24 +142,18 @@ main{
     .work-div{
         @include marginSides(20vh);
 
-        //==Helper (Will Delete Later)==
-        /*
-        .game-section{
-            background-color: darkred;
+        .work-header{
+            @include flexCenter(row);
         }
 
-        .illustration-section{
-            background-color: darkcyan;
-        }
+        .work-category{
+            @include flexCenter(row);
 
-        .model-section{
-            background-color: darkolivegreen;
-        }
+            font-family: Avenir;
+            font-size: 5vh;
 
-        .pixel-section{
-            background-color: darkgoldenrod;
-        } */
-        //==Helper End==
+            margin-bottom: 2vh;
+        }
 
         .image-container{
             @include flexCenter(row);
@@ -176,6 +202,53 @@ main{
                 font-family: Avenir;
             }
         } 
+    }
+
+    .contact-div{
+        font-family: Avenir;
+
+        form{
+            @include flexCenter(column);
+
+            .one-line-input{
+                @include inputValues();
+
+                background-color: $inputColour;
+            }
+    
+            .multi-line-input{
+                @include inputValues();
+
+                background-color: $inputColour;
+                height:30vh;
+            }
+
+            .button-class{
+                width:15vh;
+                height:5vh;
+
+                border:none;
+                border-radius: 4px;
+                
+                color:white;
+                background-color: $buttonGreenColour;
+
+                font-family: Avenir;
+                font-size: 2.5vh;
+
+                &:hover{
+                    background-color: $buttonHoverColour;
+                }
+            }
+
+            h4{
+                margin-bottom: 1vh;
+            }
+
+            h2{
+                margin:0.5vh;
+            }
+        }
     }
 }
 

@@ -8,6 +8,18 @@
   src: url(./fonts//AvenirLTStd-Roman.otf);
 }
 
+html ::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+html ::-webkit-scrollbar-track {
+  background: black;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background: #c4aedd;
+}
+
 body {
   background-color: #282424;
   margin: 0px auto;
@@ -121,22 +133,45 @@ main .arrow-div .white-arrow {
 main .work-div {
   margin-left: 20vh;
   margin-right: 20vh;
-  /*
-        .game-section{
-            background-color: darkred;
-        }
+}
 
-        .illustration-section{
-            background-color: darkcyan;
-        }
+main .work-div .work-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
 
-        .model-section{
-            background-color: darkolivegreen;
-        }
-
-        .pixel-section{
-            background-color: darkgoldenrod;
-        } */
+main .work-div .work-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: Avenir;
+  font-size: 5vh;
+  margin-bottom: 2vh;
 }
 
 main .work-div .image-container {
@@ -226,6 +261,74 @@ main .work-div .image-container figcaption {
       -ms-flex-direction: row;
           flex-direction: row;
   font-family: Avenir;
+}
+
+main .contact-div {
+  font-family: Avenir;
+}
+
+main .contact-div form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .contact-div form .one-line-input {
+  width: 70vh;
+  padding: 1vh;
+  font-family: Avenir;
+  font-size: 2.5vh;
+  color: white;
+  border-color: white;
+  border: 0;
+  background-color: #3d3737;
+}
+
+main .contact-div form .multi-line-input {
+  width: 70vh;
+  padding: 1vh;
+  font-family: Avenir;
+  font-size: 2.5vh;
+  color: white;
+  border-color: white;
+  border: 0;
+  background-color: #3d3737;
+  height: 30vh;
+}
+
+main .contact-div form .button-class {
+  width: 15vh;
+  height: 5vh;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: #559355;
+  font-family: Avenir;
+  font-size: 2.5vh;
+}
+
+main .contact-div form .button-class:hover {
+  background-color: #407654;
+}
+
+main .contact-div form h4 {
+  margin-bottom: 1vh;
+}
+
+main .contact-div form h2 {
+  margin: 0.5vh;
 }
 
 footer {
