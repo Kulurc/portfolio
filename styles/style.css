@@ -25,12 +25,16 @@ html ::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: #282424;
+  background-image: url(/images/bg.png);
+  background-size: 100%;
+  background-attachment: fixed;
   margin: 0px auto;
+  overflow: hidden;
 }
 
 .navbar {
   background-color: #1d1a1a;
+  z-index: 100;
   position: fixed;
   -webkit-transition: width 200ms ease;
   transition: width 200ms ease;
@@ -418,6 +422,24 @@ footer .social-media-div a .social-icon {
 
 footer p {
   margin-left: 5rem;
+}
+
+#loader {
+  background: #2b2830;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+#loader .loading-gif {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 10vw;
 }
 
 @-webkit-keyframes up-down {

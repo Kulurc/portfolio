@@ -12,6 +12,8 @@ $navSecondary:rgb(14, 12, 12);
 $buttonGreenColour: rgb(85, 147, 85);
 $buttonHoverColour: rgb(64, 118, 84);
 
+$loadingColour: rgb(43,40,48);
+
 //============
 //------Fonts------
 //============
@@ -81,12 +83,19 @@ html{
 }
 
 body{
-    background-color: $backgroundColour;
+    background-image: url(/images/bg.png);
+    background-size:100%;
+    background-attachment: fixed;
+
     margin: 0px auto;
+
+    overflow: hidden;
 }
 
 .navbar{
     background-color:$navColour;
+
+    z-index:100;
 
     position:fixed;
 
@@ -327,6 +336,28 @@ footer{
 
     p{
         margin-left:5rem;
+    }
+}
+
+#loader{
+    background: $loadingColour;
+
+    height: 100vh;
+    width:100%;
+
+    position:fixed;
+    z-index: 1000;
+
+    .loading-gif{
+        position:absolute;
+        margin:auto;
+
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+
+        width:10vw;
     }
 }
 
