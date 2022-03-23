@@ -426,7 +426,7 @@ footer p {
 
 #loader {
   background: #2b2830;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: fixed;
   z-index: 1000;
@@ -464,7 +464,7 @@ footer p {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .navbar {
     bottom: 0;
     width: 100vw;
@@ -486,7 +486,7 @@ footer p {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   .navbar {
     top: 0;
     width: 5rem;
