@@ -8,10 +8,6 @@
   src: url(./fonts//AvenirLTStd-Roman.otf);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 html ::-webkit-scrollbar {
   width: 0.25rem;
 }
